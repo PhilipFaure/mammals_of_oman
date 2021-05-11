@@ -1,0 +1,147 @@
+{
+  "@@last_modified": "2021-05-11T11:10:24.577773",
+  "heyWorld": "Hey World",
+  "@heyWorld": {
+    "description": "Simpel word for greeting ",
+    "type": "text",
+    "placeholders": {}
+  },
+  "MmmlsOmn": "ثدييات عمان",
+  "@MmmlsOmn": {
+    "description": "اسم التطبيق",
+    "type": "text",
+    "placeholders": {}
+  },
+  "AlphIndx": "فهرس أبجدي",
+  "@AlphIndx": {
+    "description": "Drawer Index",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Lang": "لغة",
+  "@Lang": {
+    "description": "Language",
+    "type": "text",
+    "placeholders": {}
+  },
+  "TrcksDrppngs": "مسارات وإسقاطات",
+  "@TrcksDrppngs": {
+    "description": "Drawer Tracks and Droppings",
+    "type": "text",
+    "placeholders": {}
+  },
+  "SpcsIndx": "فهرس الأنواع",
+  "@SpcsIndx": {
+    "description": "Drawer Species Index",
+    "type": "text",
+    "placeholders": {}
+  },
+  "FmlyIndx": "فهرس العائلة",
+  "@FmlyIndx": {
+    "description": "Drawer Family Index",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Cntnts": "محتويات",
+  "@Cntnts": {
+    "description": "Contents",
+    "type": "text",
+    "placeholders": {}
+  },
+  "CntctUs": "اتصل بنا",
+  "@CntctUs": {
+    "description": "Contact Us",
+    "type": "text",
+    "placeholders": {}
+  },
+  "About": "حول",
+  "@About": {
+    "description": "About",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ArbnLprd": "النمر العربي",
+  "@ArbnLprd": {
+    "description": "Arabian Leopard",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ArbnOryx": "عربي",
+  "@ArbnOryx": {
+    "description": "Arabian Oryx",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ArbnWlf": "ذئب عربي",
+  "@ArbnWlf": {
+    "description": "Arabian Wolf",
+    "type": "text",
+    "placeholders": {}
+  },
+  "BlnfrdsFx": "بلانفورد فوكس",
+  "@BlnfrdsFx": {
+    "description": "Blanfords Fox",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Crcl": "كاراكال",
+  "@Crcl": {
+    "description": "Caracal",
+    "type": "text",
+    "placeholders": {}
+  },
+  "CmmnGnt": "الجينات المشتركة",
+  "@CmmnGnt": {
+    "description": "Common Genet",
+    "type": "text",
+    "placeholders": {}
+  },
+  "NAWldct": "وايلدكات شمال افريقيا",
+  "@NAWldct": {
+    "description": "North African Wildcat",
+    "type": "text",
+    "placeholders": {}
+  },
+  "RdFx": "ثعلب احمر",
+  "@RdFx": {
+    "description": "Red Fox",
+    "type": "text",
+    "placeholders": {}
+  },
+  "StrpdHyn": "ضبع مخطط",
+  "@StrpdHyn": {
+    "description": "Striped Hyaena",
+    "type": "text",
+    "placeholders": {}
+  },
+  "WTMngs": "النمس ذو الذيل الأبيض",
+  "@WTMngs": {
+    "description": "White Tailed Mongoose",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Pctrs": "الصور",
+  "@Pctrs": {
+    "description": "الصور",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Dscrptn": "وصف",
+  "@Dscrptn": {
+    "description": "وصف",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Dstrbtn": "توزيع",
+  "@Dstrbtn": {
+    "description": "توزيع",
+    "type": "text",
+    "placeholders": {}
+  },
+  "OrxDscrptn": "ظباء متوسط الحجم مع قرون لينغ جدا. بشكل عام أبيض اللون مع أرجل بنية أو سوداء داكنة ، جوارب بيضاء فوق حوافر سوداء ، شريط جانبي داكن وذيل أبيض ، مائل إلى الأسود. رأس الكمامة أبيض اللون وعلامات الوجه ذات اللون البني الداكن تتضمن شريطًا رأسيًا يمر عبر العين وقطعة على جسر الأنف. في الصيف يكون شريط الجناح والعلامات الداكنة الأخرى على الجسم أفتح أو غائبة تمامًا. يحمل كل من الذكور والإناث قرونًا حلقية مستقيمة تقريبًا قد يصل طولها إلى 70 سم. عادة ما يكون للإناث قرون أرق وأطول من الذكور. يصعب التمييز بين الجنسين إلا أن الذكور البالغين هم مجموعة أثقل.",
+  "@OrxDscrptn": {
+    "description": "OrxDscrptn",
+    "type": "text",
+    "placeholders": {}
+  }
+}

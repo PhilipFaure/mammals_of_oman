@@ -1,0 +1,147 @@
+{
+  "@@last_modified": "2021-05-11T11:10:24.577773",
+  "heyWorld": "Hey World",
+  "@heyWorld": {
+    "description": "Simpel word for greeting ",
+    "type": "text",
+    "placeholders": {}
+  },
+  "MmmlsOmn": "Mammals of Oman",
+  "@MmmlsOmn": {
+    "description": "Name of the app",
+    "type": "text",
+    "placeholders": {}
+  },
+  "AlphIndx": "Alphabetic Index",
+  "@AlphIndx": {
+    "description": "Drawer Index",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Lang": "Language",
+  "@Lang": {
+    "description": "Language",
+    "type": "text",
+    "placeholders": {}
+  },
+  "TrcksDrppngs": "Tracks and Droppings",
+  "@TrcksDrppngs": {
+    "description": "Drawer Tracks and Droppings",
+    "type": "text",
+    "placeholders": {}
+  },
+  "SpcsIndx": "Species Index",
+  "@SpcsIndx": {
+    "description": "Drawer Species Index",
+    "type": "text",
+    "placeholders": {}
+  },
+  "FmlyIndx": "Family Index",
+  "@FmlyIndx": {
+    "description": "Drawer Family Index",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Cntnts": "Contents",
+  "@Cntnts": {
+    "description": "Contents",
+    "type": "text",
+    "placeholders": {}
+  },
+  "CntctUs": "Contact Us",
+  "@CntctUs": {
+    "description": "Contact Us",
+    "type": "text",
+    "placeholders": {}
+  },
+  "About": "About",
+  "@About": {
+    "description": "About",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ArbnLprd": "Arabian Leopard",
+  "@ArbnLprd": {
+    "description": "Arabian Leopard",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ArbnOryx": "Arabian Oryx",
+  "@ArbnOryx": {
+    "description": "Arabian Oryx",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ArbnWlf": "Arabian Wolf",
+  "@ArbnWlf": {
+    "description": "Arabian Wolf",
+    "type": "text",
+    "placeholders": {}
+  },
+  "BlnfrdsFx": "Blanfords Fox",
+  "@BlnfrdsFx": {
+    "description": "Blanfords Fox",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Crcl": "Caracal",
+  "@Crcl": {
+    "description": "Caracal",
+    "type": "text",
+    "placeholders": {}
+  },
+  "CmmnGnt": "Common Genet",
+  "@CmmnGnt": {
+    "description": "Common Genet",
+    "type": "text",
+    "placeholders": {}
+  },
+  "NAWldct": "North African Wildcat",
+  "@NAWldct": {
+    "description": "North African Wildcat",
+    "type": "text",
+    "placeholders": {}
+  },
+  "RdFx": "Red Fox",
+  "@RdFx": {
+    "description": "Red Fox",
+    "type": "text",
+    "placeholders": {}
+  },
+  "StrpdHyn": "Striped Hyaena",
+  "@StrpdHyn": {
+    "description": "Striped Hyaena",
+    "type": "text",
+    "placeholders": {}
+  },
+  "WTMngs": "White Tailed Mongoose",
+  "@WTMngs": {
+    "description": "White Tailed Mongoose",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Pctrs": "Pictures",
+  "@Pctrs": {
+    "description": "Pictures",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Dscrptn": "Description",
+  "@Dscrptn": {
+    "description": "Description",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Dstrbtn": "Distribution",
+  "@Dstrbtn": {
+    "description": "Distribution",
+    "type": "text",
+    "placeholders": {}
+  },
+  "OrxDscrptn": "A striking medium-sized antelope with very ling horns. Overall is white in colour with dark brown or black legs, white socks above black hooves, a dark flank stripe and white tail, tipped black. The muzzle tip is white and the dark brown facial markings include a vertical bar that runs through the eye and a patch on the bridge of the nose. In summer the flank stripe and other dark markings of the body are lighter or absent altogether. Both males and females carry almost straight, ringed horns that may reach 70 cm in length. Females usually have thinner and longer horns than males. Sexes are difficult to tell apart except that adult males are heavier set.",
+  "@OrxDscrptn": {
+    "description": "OrxDscrptn",
+    "type": "text",
+    "placeholders": {}
+  }
+}
