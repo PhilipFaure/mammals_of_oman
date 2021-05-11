@@ -5,40 +5,89 @@ import './indexPageAlph.dart';
 import './picsLeopard.dart';
 import './tabsOryx.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:intl/intl.dart';
-import './app_localizations.dart';
+// import 'package:intl/intl.dart';
+// import './app_localizations.dart';
+import './v_app_localizations.dart';
+import './v_language_constants.dart';
+import 'package:provider/provider.dart';
+// import './v_settings.dart';
+// import './v_language.dart';
 
 // import 'package:buzzkill/generated/l10n.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() => _MyAppState();
+
+  const MyApp({Key key}) : super(key: key);
+  static void setLocale(BuildContext context, Locale newLocale) {
+    _MyAppState state = context.findAncestorStateOfType<_MyAppState>();
+    state.setLocale(newLocale);
+  } // setLocale
+
+    @override
+    _MyAppState createState() => _MyAppState();
+
+  // @override
+  // State<StatefulWidget> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp>{
   // This widget is the root of your application.
 
-  AppLocalizationDelegate _localeOverrideDelegate =
-  AppLocalizationDelegate(Locale('en', ''));
+  Locale _locale;
+  setLocale(Locale locale) {
+    setState(() {
+      _locale = locale;
+    });
+  }
+
+  @override
+  void didChangeDependencies() {
+    getLocale().then((locale) {
+      setState(() {
+        this._locale = locale;
+      });
+    });
+    super.didChangeDependencies();
+  }
+
+  // AppLocalizationDelegate _localeOverrideDelegate =
+  // AppLocalizationDelegate(Locale('en', ''));
 
   @override
   Widget build(BuildContext context) {
 
     return new MaterialApp(
         localizationsDelegates: [
+          AppLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
-          _localeOverrideDelegate
+          GlobalCupertinoLocalizations.delegate,
+          // _localeOverrideDelegate
         ],
-        supportedLocales: [
-          //supportedLocales parameter holds the list of languages that our app
-          // will support. May need to add in a massive list here for all
-          // countries??
-          const Locale('en', ''), // English, no country code
-          const Locale('ar', '') // Arabic, no country code
+        locale: _locale,
+        supportedLocales:[
+          Locale('en', 'UK'),
+          Locale('ar', 'OM'),
         ],
+        localeResolutionCallback: (locale, supportedLocales) {
+          for (var supportedLocale in supportedLocales) {
+            if (supportedLocale.languageCode == locale.languageCode &&
+                supportedLocale.countryCode == locale.countryCode) {
+              return supportedLocale;
+            }
+          }
+          return supportedLocales.first;
+        },
+
+        // supportedLocales: [
+        //   //supportedLocales parameter holds the list of languages that our app
+        //   // will support. May need to add in a massive list here for all
+        //   // countries??
+        //   const Locale('en', ''), // English, no country code
+        //   const Locale('ar', '') // Arabic, no country code
+        // ],
         home: MyHomePage(),
         routes: <String, WidgetBuilder> {
           "/a": (BuildContext context) => new IndexAlphbtc("Alphabetic Index"),
@@ -60,7 +109,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-            AppLocalization.of(context).MmmlsOmn
+          getTranslated(context, 'MmmlsOmn'),
+            // AppLocalization.of(context).MmmlsOmn
           // 'Mammals of Oman'
         ),
         backgroundColor: Colors.blueGrey[900],

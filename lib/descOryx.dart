@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:mammals_of_oman/v_language_constants.dart';
 import './app_localizations.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -27,7 +28,8 @@ class _DescOryx extends State<DescOryx>{
                   // to use them in all the species pages and thereby save on written
                   // code and ensure everything is standardised across the app.
                   Text(
-                    AppLocalization.of(context).ArbnOryx,
+                    getTranslated(context, 'ArbnOryx'),
+                    // AppLocalization.of(context).ArbnOryx,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.blueGrey[900],
@@ -66,7 +68,8 @@ class _DescOryx extends State<DescOryx>{
                                 )
                             ),
                             Text(
-                              AppLocalization.of(context).OrxDscrptn,
+                              getTranslated(context, 'OrxDscrptn'),
+                              // AppLocalization.of(context).OrxDscrptn,
                               // locale: ...,
                             ),
                           ]

@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mammals_of_oman/v_language_constants.dart';
 import './app_localizations.dart';
 
 class IndexAlphbtc extends StatelessWidget {
@@ -33,7 +34,8 @@ class IndexAlphbtc extends StatelessWidget {
                   FontAwesomeIcons.cat
               ),
               title: Text(
-                AppLocalization.of(context).ArbnLprd,
+                getTranslated(context, 'ArbnLprd'),
+                // AppLocalization.of(context).ArbnLprd,
                 // 'Arabian Leopard',
                 style: TextStyle(
                     fontSize: 18
@@ -46,7 +48,8 @@ class IndexAlphbtc extends StatelessWidget {
                   FontAwesomeIcons.bug
               ),
               title: Text(
-                AppLocalization.of(context).ArbnOryx,
+                getTranslated(context, 'ArbnOryx'),
+                // AppLocalization.of(context).ArbnOryx,
                 // 'Arabian Oryx',
                 style: TextStyle(
                     fontSize: 18
@@ -59,7 +62,8 @@ class IndexAlphbtc extends StatelessWidget {
                   FontAwesomeIcons.dog
               ),
               title: Text(
-                AppLocalization.of(context).ArbnWlf,
+                getTranslated(context, 'ArbnWlf'),
+                // AppLocalization.of(context).ArbnWlf,
                 // 'Arabian Wolf',
                 style: TextStyle(
                     fontSize: 18
@@ -71,7 +75,8 @@ class IndexAlphbtc extends StatelessWidget {
                   FontAwesomeIcons.dog
               ),
               title: Text(
-                AppLocalization.of(context).BlnfrdsFx,
+                getTranslated(context, 'BlnfrdsFx'),
+                // AppLocalization.of(context).BlnfrdsFx,
                 // 'Blanfords Fox',
                 style: TextStyle(
                     fontSize: 18
@@ -83,7 +88,8 @@ class IndexAlphbtc extends StatelessWidget {
                   FontAwesomeIcons.cat
               ),
               title: Text(
-                AppLocalization.of(context).Crcl,
+                getTranslated(context, 'Crcl'),
+                // AppLocalization.of(context).Crcl,
                 // 'Caracal',
                 style: TextStyle(
                     fontSize: 18
@@ -95,7 +101,8 @@ class IndexAlphbtc extends StatelessWidget {
                   FontAwesomeIcons.otter
               ),
               title: Text(
-                AppLocalization.of(context).CmmnGnt,
+                getTranslated(context, 'CmmnGnt'),
+                // AppLocalization.of(context).CmmnGnt,
                 // 'Common Genet',
                 style: TextStyle(
                     fontSize: 18
@@ -107,7 +114,8 @@ class IndexAlphbtc extends StatelessWidget {
                   FontAwesomeIcons.cat
               ),
               title: Text(
-                AppLocalization.of(context).NAWldct,
+                getTranslated(context, 'NAWldct'),
+                // AppLocalization.of(context).NAWldct,
                 // 'North African Wildcat',
                 style: TextStyle(
                     fontSize: 18
@@ -119,7 +127,8 @@ class IndexAlphbtc extends StatelessWidget {
                   FontAwesomeIcons.dog
               ),
               title: Text(
-                AppLocalization.of(context).RdFx,
+                getTranslated(context, 'RdFx'),
+                 // AppLocalization.of(context).RdFx,
                 // 'Red Fox',
                 style: TextStyle(
                     fontSize: 18
@@ -131,7 +140,8 @@ class IndexAlphbtc extends StatelessWidget {
                   FontAwesomeIcons.dog
               ),
               title: Text(
-                AppLocalization.of(context).StrpdHyn,
+                  getTranslated(context, 'StrpdHyn'),
+                // AppLocalization.of(context).StrpdHyn,
                 // 'Striped Hyaena',
                 style: TextStyle(
                     fontSize: 18
@@ -143,7 +153,8 @@ class IndexAlphbtc extends StatelessWidget {
                   FontAwesomeIcons.otter
               ),
               title: Text(
-                AppLocalization.of(context).WTMngs,
+                getTranslated(context, 'WTMngs'),
+                // AppLocalization.of(context).WTMngs,
                 // 'White Tailed Mongoose',
                 style: TextStyle(
                     fontSize: 18

@@ -1,14 +1,26 @@
 
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './widgets.dart';
 import './app_localizations.dart';
+import './v_app_localizations.dart';
+import './v_language.dart';
+import './v_language_constants.dart';
+import './main.dart';
+import 'package:provider/provider.dart';
+
 
 class MainDrawer extends StatefulWidget{
   MyDrawer createState()=> MyDrawer();
 }
 
 class MyDrawer extends State<MainDrawer>{
+
+  void _changeLanguage(Language language) async {
+    Locale _locale = await setLocale(language.languageCode);
+    MyApp.setLocale(context, _locale);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +52,8 @@ class MyDrawer extends State<MainDrawer>{
                       ),
                     ),
                     Text(
-                      AppLocalization.of(context).Cntnts,
+                      getTranslated(context, 'Cntnts'),
+                      // AppLocalization.of(context).Cntnts,
                       style: TextStyle(
                         fontSize: 22,
                         color: Colors.white,
@@ -55,7 +68,8 @@ class MyDrawer extends State<MainDrawer>{
                   Icons.sort_by_alpha
               ),
               title: Text(
-                AppLocalization.of(context).AlphIndx,
+                getTranslated(context, 'AlphIndx'),
+                // AppLocalization.of(context).AlphIndx,
                 // 'Alphabetic Index',
                 style: TextStyle(
                     fontSize: 18
@@ -69,7 +83,8 @@ class MyDrawer extends State<MainDrawer>{
                   FontAwesomeIcons.dog
               ),
               title: Text(
-                  AppLocalization.of(context).FmlyIndx,
+                getTranslated(context, 'FmlyIndx'),
+                  // AppLocalization.of(context).FmlyIndx,
                 // 'Family Index',
                 style: TextStyle(
                     fontSize: 18
@@ -82,7 +97,8 @@ class MyDrawer extends State<MainDrawer>{
                 FontAwesomeIcons.cat,
               ),
               title: Text(
-                  AppLocalization.of(context).SpcsIndx,
+                getTranslated(context, 'SpcsIndx'),
+                  // AppLocalization.of(context).SpcsIndx,
                 // 'Species Index',
                 style: TextStyle(
                     fontSize: 18
@@ -95,7 +111,8 @@ class MyDrawer extends State<MainDrawer>{
                   Icons.pets
               ),
               title: Text(
-                AppLocalization.of(context).SpcsIndx,
+                getTranslated(context, 'SpcsIndx'),
+                // AppLocalization.of(context).SpcsIndx,
                 // 'Tracks and Droppings',
                 style: TextStyle(
                     fontSize: 18
@@ -103,79 +120,78 @@ class MyDrawer extends State<MainDrawer>{
               ),
               // onTap: () => Navigator.of(context).pushNamed('/a'),
             ),
+
             ExpansionTile(
               leading: Icon(
                   FontAwesomeIcons.language
               ),
               title: Text(
-                AppLocalization.of(context).Lang,
+                getTranslated(context, 'Lang'),
+                // AppLocalization.of(context).Lang,
                 // 'Language',
                 style: TextStyle(
                     fontSize: 18
                 ),
               ),
               children: <Widget>[
-                ListTile(
-                  title: Center(
-                    child: Text(
-                      'English',
-                      style: TextStyle(
-                        fontSize: 16,
-                      ),
+                Column(
+                  children: <Widget>[
+                    DropdownButton<Language>(
+                      // iconSize: 30,
+                      onChanged: (Language language) {
+                        _changeLanguage(language);
+                      },
+                      items: Language.languageList()
+                          .map<DropdownMenuItem<Language>>(
+                            (e) => DropdownMenuItem<Language>(
+                            value: e, child: Text(e.name)),
+                      )
+                          .toList(),
                     ),
-                  ),
-                  onTap: () {
-                    setState(() {
-                      AppLocalization.load(Locale('en', 'UK'));
-                    });
-                  },
+                  ],
                 ),
-                ListTile(
-                  title: Center(
-                    child: Text(
-                        'عربى',
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
-                      ),
-                  ),
-                  onTap: () {
-                    setState(() {
-                      AppLocalization.load(Locale('ar', 'OM'));
-                    });
-                  },
-                ),
-            //     DropdownButton <Language>(
-            //   iconSize: 30,
-            //   hint: Text(
-            //     'Choose language'
-            //       // getTranslated(context, 'change_language')
-            //   ),
-            //   onChanged: (Language language) {
-            //     // ignore: unnecessary_statements
-            //     null;
-            //   },
-            //   items: Language.languageList()
-            //       .map<DropdownMenuItem<Language>>(
-            //         (e) => DropdownMenuItem<Language>(
-            //         value: e, child: Text(e.language)),
-            //   )
-            //       .toList(),
-            // ),
-                // Switch(
-                //   value: value,
-                //   onChanged: (bool newValue) {
-                //     onChanged(newValue);
-                //   },
-                // ),
               ],
             ),
+                // ListTile(
+                //   title: Center(
+                //     child: Text(
+                //       'English',
+                //       style: TextStyle(
+                //         fontSize: 16,
+                //       ),
+                //     ),
+                //   ),
+                //   // onChanged: (Language language) {
+                //   //   _changeLanguage(language);
+                //   // },
+                //   onTap: () {
+                //     setState(() {
+                //       AppLocalization.load(Locale('en', 'UK'));
+                //     });
+                //   },
+                // ),
+                // ListTile(
+                //   title: Center(
+                //     child: Text(
+                //         'عربى',
+                //         style: TextStyle(
+                //           fontSize: 16,
+                //         ),
+                //       ),
+                //   ),
+                //   onTap: () {
+                //     setState(() {
+                //       AppLocalization.load(Locale('ar', 'OM'));
+                //     });
+                //   },
+                // ),
             ListTile(
                 leading: Icon(
                     Icons.alternate_email
                 ),
                 title: Text(
-                  AppLocalization.of(context).CntctUs,
+                  getTranslated(context, 'CntctUs'),
+                  // AppLocalization.of(context).CntctUs,
                   // 'Contact Us',
                   style: TextStyle(
                       fontSize: 18
@@ -190,7 +206,8 @@ class MyDrawer extends State<MainDrawer>{
                   FontAwesomeIcons.infoCircle
               ),
               title: Text(
-                  AppLocalization.of(context).About,
+                getTranslated(context, 'About'),
+                  // AppLocalization.of(context).About,
                   // 'About',
                   style: TextStyle(
                     fontSize: 18,
