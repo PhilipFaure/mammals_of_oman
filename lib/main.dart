@@ -21,11 +21,10 @@ class _MyAppState extends State<MyApp>{
   // This widget is the root of your application.
 
   AppLocalizationDelegate _localeOverrideDelegate =
-  AppLocalizationDelegate(Locale('en', 'UK'));
+  AppLocalizationDelegate(Locale('en', ''));
 
   @override
   Widget build(BuildContext context) {
-
 
     return new MaterialApp(
         localizationsDelegates: [

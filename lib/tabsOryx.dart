@@ -19,7 +19,7 @@ class _OryxState extends State<Oryx> {
 
   final tabs = [
     PicsOryx('Arabian Oryx'),
-    DescOryx('Arabian Oryx'),
+    DescOryx(),
     Image(
         image: AssetImage(
           './assets/oryx_distr.JPG',

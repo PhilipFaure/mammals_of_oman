@@ -1,15 +1,18 @@
 
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import './app_localizations.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
-class DescOryx extends StatelessWidget {
+class DescOryx extends StatefulWidget{
+  _DescOryx createState()=> _DescOryx();
+}
 
-  final String title;
-  DescOryx(this.title);
+class _DescOryx extends State<DescOryx>{
+
+  // final String title;
+  // _DescOryx(this.title);
 
   @override
   Widget build(BuildContext context) {
