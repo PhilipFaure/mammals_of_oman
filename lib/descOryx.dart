@@ -22,35 +22,44 @@ class _DescOryx extends State<DescOryx>{
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
             child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                // crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   // Need to wrap these text boxes into separate functions to be able
                   // to use them in all the species pages and thereby save on written
                   // code and ensure everything is standardised across the app.
-                  Text(
-                    getTranslated(context, 'ArbnOryx'),
-                    // AppLocalization.of(context).ArbnOryx,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blueGrey[900],
-                      fontSize: 28,
-                    ),
-                  ),
-                  Text(
-                    'Oryx leucoryx',
-                    style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      color: Colors.blueGrey[900],
-                      fontSize: 20,
-                    ),
-                  ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
-                    child: Text(
-                      'Arabic: Al Maha',
-                      style: TextStyle(
-                        color: Colors.blueGrey[900],
-                        fontSize: 20,
+                    padding: const EdgeInsets.only(top: 1.0, bottom: 5.0),
+                    child: Container(
+                      width: double.infinity,
+                      color: Colors.blueGrey[100],
+                      child: Column(
+                        // crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget> [
+                          Text(
+                            getTranslated(context, 'ArbnOryx'),
+                            // AppLocalization.of(context).ArbnOryx,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blueGrey[900],
+                              fontSize: 28,
+                            ),
+                          ),
+                          Text(
+                            'Oryx leucoryx',
+                            style: TextStyle(
+                              fontStyle: FontStyle.italic,
+                              color: Colors.blueGrey[900],
+                              fontSize: 20,
+                            ),
+                          ),
+                          Text(
+                            'Arabic: Al Maha',
+                            style: TextStyle(
+                              color: Colors.blueGrey[900],
+                              fontSize: 20,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -177,8 +186,9 @@ class _DescOryx extends State<DescOryx>{
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 25.0),
+                    padding: const EdgeInsets.only(top: 25.0, bottom: 10.0),
                     child: Container(
+                      width: double.infinity,
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget> [
