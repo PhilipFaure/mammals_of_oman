@@ -3,13 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './widgets.dart';
-import './app_localizations.dart';
-import './v_app_localizations.dart';
-import './v_language.dart';
-import './v_language_constants.dart';
+import './language.dart';
+import './language_constants.dart';
 import './main.dart';
-import 'package:provider/provider.dart';
-
 
 class MainDrawer extends StatefulWidget{
   MyDrawer createState()=> MyDrawer();
@@ -53,7 +49,6 @@ class MyDrawer extends State<MainDrawer>{
                     ),
                     Text(
                       getTranslated(context, 'Cntnts'),
-                      // AppLocalization.of(context).Cntnts,
                       style: TextStyle(
                         fontSize: 22,
                         color: Colors.white,
@@ -69,14 +64,11 @@ class MyDrawer extends State<MainDrawer>{
               ),
               title: Text(
                 getTranslated(context, 'AlphIndx'),
-                // AppLocalization.of(context).AlphIndx,
-                // 'Alphabetic Index',
                 style: TextStyle(
                     fontSize: 18
                 ),
               ),
               onTap: () => Navigator.of(context).pushNamed('/a'),
-              // trailing: Icon(Icons.person),
             ),
             ListTile(
               leading: Icon(
@@ -84,8 +76,6 @@ class MyDrawer extends State<MainDrawer>{
               ),
               title: Text(
                 getTranslated(context, 'FmlyIndx'),
-                  // AppLocalization.of(context).FmlyIndx,
-                // 'Family Index',
                 style: TextStyle(
                     fontSize: 18
                 ),
@@ -98,8 +88,6 @@ class MyDrawer extends State<MainDrawer>{
               ),
               title: Text(
                 getTranslated(context, 'SpcsIndx'),
-                  // AppLocalization.of(context).SpcsIndx,
-                // 'Species Index',
                 style: TextStyle(
                     fontSize: 18
                 ),
@@ -112,8 +100,6 @@ class MyDrawer extends State<MainDrawer>{
               ),
               title: Text(
                 getTranslated(context, 'SpcsIndx'),
-                // AppLocalization.of(context).SpcsIndx,
-                // 'Tracks and Droppings',
                 style: TextStyle(
                     fontSize: 18
                 ),
@@ -127,8 +113,6 @@ class MyDrawer extends State<MainDrawer>{
               ),
               title: Text(
                 getTranslated(context, 'Lang'),
-                // AppLocalization.of(context).Lang,
-                // 'Language',
                 style: TextStyle(
                     fontSize: 18
                 ),
@@ -137,7 +121,6 @@ class MyDrawer extends State<MainDrawer>{
                 Column(
                   children: <Widget>[
                     DropdownButton<Language>(
-                      // iconSize: 30,
                       onChanged: (Language language) {
                         _changeLanguage(language);
                       },
@@ -152,47 +135,12 @@ class MyDrawer extends State<MainDrawer>{
                 ),
               ],
             ),
-                // ListTile(
-                //   title: Center(
-                //     child: Text(
-                //       'English',
-                //       style: TextStyle(
-                //         fontSize: 16,
-                //       ),
-                //     ),
-                //   ),
-                //   // onChanged: (Language language) {
-                //   //   _changeLanguage(language);
-                //   // },
-                //   onTap: () {
-                //     setState(() {
-                //       AppLocalization.load(Locale('en', 'UK'));
-                //     });
-                //   },
-                // ),
-                // ListTile(
-                //   title: Center(
-                //     child: Text(
-                //         'عربى',
-                //         style: TextStyle(
-                //           fontSize: 16,
-                //         ),
-                //       ),
-                //   ),
-                //   onTap: () {
-                //     setState(() {
-                //       AppLocalization.load(Locale('ar', 'OM'));
-                //     });
-                //   },
-                // ),
             ListTile(
                 leading: Icon(
                     Icons.alternate_email
                 ),
                 title: Text(
                   getTranslated(context, 'CntctUs'),
-                  // AppLocalization.of(context).CntctUs,
-                  // 'Contact Us',
                   style: TextStyle(
                       fontSize: 18
                   ),
@@ -207,8 +155,6 @@ class MyDrawer extends State<MainDrawer>{
               ),
               title: Text(
                 getTranslated(context, 'About'),
-                  // AppLocalization.of(context).About,
-                  // 'About',
                   style: TextStyle(
                     fontSize: 18,
                   )
@@ -216,7 +162,6 @@ class MyDrawer extends State<MainDrawer>{
               onTap: () {
                 showAboutDialog(
                   context: context,
-                  // applicationIcon: FlutterLogo(),
                   applicationName: 'Mammals of Oman',
                   applicationVersion: 'Version 0.0.1',
                   applicationLegalese: 'Copyright© 2021 Publisher Name',

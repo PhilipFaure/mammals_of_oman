@@ -1,6 +1,6 @@
 
+
 import 'package:flutter/material.dart';
-import './app_localizations.dart';
 
 class PicsOryx extends StatelessWidget {
 
@@ -50,5 +50,4 @@ class PicsOryx extends StatelessWidget {
       ),
     );
   }
-
 }

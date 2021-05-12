@@ -1,19 +1,13 @@
 
+
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import './drawer.dart';
 import './indexPageAlph.dart';
 import './picsLeopard.dart';
 import './tabsOryx.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-// import 'package:intl/intl.dart';
-// import './app_localizations.dart';
-import './v_app_localizations.dart';
-import './v_language_constants.dart';
-import 'package:provider/provider.dart';
-// import './v_settings.dart';
-// import './v_language.dart';
-
-// import 'package:buzzkill/generated/l10n.dart';
+import './app_localizations.dart';
+import './language_constants.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,13 +21,9 @@ class MyApp extends StatefulWidget {
 
     @override
     _MyAppState createState() => _MyAppState();
-
-  // @override
-  // State<StatefulWidget> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp>{
-  // This widget is the root of your application.
 
   Locale _locale;
   setLocale(Locale locale) {
@@ -52,9 +42,6 @@ class _MyAppState extends State<MyApp>{
     super.didChangeDependencies();
   }
 
-  // AppLocalizationDelegate _localeOverrideDelegate =
-  // AppLocalizationDelegate(Locale('en', ''));
-
   @override
   Widget build(BuildContext context) {
 
@@ -64,7 +51,6 @@ class _MyAppState extends State<MyApp>{
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
-          // _localeOverrideDelegate
         ],
         locale: _locale,
         supportedLocales:[
@@ -80,14 +66,6 @@ class _MyAppState extends State<MyApp>{
           }
           return supportedLocales.first;
         },
-
-        // supportedLocales: [
-        //   //supportedLocales parameter holds the list of languages that our app
-        //   // will support. May need to add in a massive list here for all
-        //   // countries??
-        //   const Locale('en', ''), // English, no country code
-        //   const Locale('ar', '') // Arabic, no country code
-        // ],
         home: MyHomePage(),
         routes: <String, WidgetBuilder> {
           "/a": (BuildContext context) => new IndexAlphbtc("Alphabetic Index"),
@@ -110,8 +88,6 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(
           getTranslated(context, 'MmmlsOmn'),
-            // AppLocalization.of(context).MmmlsOmn
-          // 'Mammals of Oman'
         ),
         backgroundColor: Colors.blueGrey[900],
         actions: <Widget>[
@@ -134,14 +110,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      // body: Center(
-      //   child: Image(
-      //     image: NetworkImage(
-      //       'https://productimages.artboxone.com/1000715759-PO-big.jpg'
-      //       // 'https://media.sciencephoto.com/image/c0209838/800wm'
-      //     )
-      //   ),
-      // ),
       backgroundColor: Colors.blueGrey[400],
     );
   }

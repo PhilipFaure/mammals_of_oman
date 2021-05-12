@@ -1,19 +1,13 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:mammals_of_oman/v_language_constants.dart';
-import './app_localizations.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:mammals_of_oman/language_constants.dart';
 
 class DescOryx extends StatefulWidget{
   _DescOryx createState()=> _DescOryx();
 }
 
 class _DescOryx extends State<DescOryx>{
-
-  // final String title;
-  // _DescOryx(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +27,9 @@ class _DescOryx extends State<DescOryx>{
                       width: double.infinity,
                       color: Colors.blueGrey[100],
                       child: Column(
-                        // crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget> [
                           Text(
                             getTranslated(context, 'ArbnOryx'),
-                            // AppLocalization.of(context).ArbnOryx,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.blueGrey[900],
@@ -78,8 +70,6 @@ class _DescOryx extends State<DescOryx>{
                             ),
                             Text(
                               getTranslated(context, 'OrxDscrptn'),
-                              // AppLocalization.of(context).OrxDscrptn,
-                              // locale: ...,
                             ),
                           ]
                       ),
@@ -212,5 +202,4 @@ class _DescOryx extends State<DescOryx>{
       ),
     );
   }
-
 }
