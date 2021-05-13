@@ -15,33 +15,33 @@ class PicsOryx extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Image(
-                    image: NetworkImage(
-                        'https://www.arabnews.com/sites/default/files/main-image/2019/01/11/1426421-162007494.jpg'
+                    image: AssetImage(
+                        'assets/oryx_pic_1.JPG'
                     )
                 ),
                 Image(
-                    image: NetworkImage(
-                        'https://upload.wikimedia.org/wikipedia/commons/4/43/Arabian_oryx_%28oryx_leucoryx%29.jpg'
+                    image: AssetImage(
+                        'assets/oryx_pic_2.JPG'
                     )
                 ),
                 Image(
-                    image: NetworkImage(
-                        'https://alchetron.com/cdn/arabian-oryx-283a0181-08a2-46ca-8d32-79723c792e9-resize-750.jpg'
+                    image: AssetImage(
+                        'assets/oryx_pic_3.JPG'
                     )
                 ),
                 Image(
-                    image: NetworkImage(
-                        'https://c8.alamy.com/comp/AHM3N4/oryx-tracks-AHM3N4.jpg'
+                    image: AssetImage(
+                        'assets/oryx_pic_4.JPG'
                     )
                 ),
                 Image(
-                    image: NetworkImage(
-                        'https://images.auscape.com.au/p/632/bio24976-15426997.jpg.webp'
+                    image: AssetImage(
+                        'assets/oryx_pic_5.JPG'
                     )
                 ),
                 Image(
-                    image: NetworkImage(
-                        'https://www.mindenpictures.com/cache/pcache2/80128267.jpg'
+                    image: AssetImage(
+                        'assets/oryx_pic_6.JPG'
                     )
                 ),
               ],

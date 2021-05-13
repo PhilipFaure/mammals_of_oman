@@ -22,28 +22,28 @@ class PicsLeopard extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Image(
-                    image: NetworkImage(
-                        'https://lp-cms-production.imgix.net/image_browser/leopard-africa-safari.jpg'
+                    image: AssetImage(
+                        'assets/leopard_pic_1.JPG'
                     )
                 ),
                 Image(
-                    image: NetworkImage(
-                        'https://cloudfront.safaribookings.com/blog/2017/06/Leopard-BW_1200px.jpg'
+                    image: AssetImage(
+                        'assets/leopard_pic_2.JPG'
                     )
                 ),
                 Image(
-                    image: NetworkImage(
-                        'https://i.insider.com/5f1af6902618b9264e7754c7?width=1200&format=jpeg'
+                    image: AssetImage(
+                        'assets/leopard_pic_3.JPG'
                     )
                 ),
                 Image(
-                    image: NetworkImage(
-                        'https://i.pinimg.com/originals/9e/f0/b9/9ef0b9132d4e377b6eae79343f48ea01.jpg'
+                    image: AssetImage(
+                        'assets/leopard_pic_4.JPG'
                     )
                 ),
                 Image(
-                    image: NetworkImage(
-                        'https://www.seekpng.com/png/detail/387-3870853_leopard-tracks-size-of-leopard-tracks.png'
+                    image: AssetImage(
+                        'assets/leopard_pic_5.JPG'
                     )
                 ),
               ],

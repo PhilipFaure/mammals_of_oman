@@ -40,8 +40,8 @@ class MyDrawer extends State<MainDrawer>{
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage(
-                                'https://productimages.artboxone.com/1000715759-PO-big.jpg'
+                            image: AssetImage(
+                              'assets/leopard_bubblegum_profile.JPG'
                             ),
                             fit: BoxFit.fill
                         ),
@@ -99,7 +99,7 @@ class MyDrawer extends State<MainDrawer>{
                   Icons.pets
               ),
               title: Text(
-                getTranslated(context, 'SpcsIndx'),
+                getTranslated(context, 'TrcksDrppngs'),
                 style: TextStyle(
                     fontSize: 18
                 ),

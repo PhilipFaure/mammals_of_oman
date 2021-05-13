@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import './drawer.dart';
 import './indexPageAlph.dart';
@@ -8,6 +9,7 @@ import './picsLeopard.dart';
 import './tabsOryx.dart';
 import './app_localizations.dart';
 import './language_constants.dart';
+import './list_data.dart';
 
 void main() => runApp(MyApp());
 
@@ -92,10 +94,13 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.blueGrey[900],
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.search),
             onPressed: () {
-              //
+              showSearch(
+                  context: context,
+                  delegate: AnimalListSearch(),
+              );
             },
+            icon: Icon(Icons.search),
           )
         ],
       ),
@@ -103,8 +108,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: NetworkImage(
-                'https://productimages.artboxone.com/1000715759-PO-big.jpg'
+            image: AssetImage(
+              'assets/leopard_bubblegum.JPG',
             ),
             fit: BoxFit.cover,
           ),
@@ -112,5 +117,86 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       backgroundColor: Colors.blueGrey[400],
     );
+  }
+}
+
+class AnimalListSearch extends SearchDelegate<AnimalList> {
+
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    return [
+      IconButton(
+        icon: Icon(Icons.clear),
+        onPressed: () {
+          return query = '';
+        },
+      )
+    ];
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        close(context, null);
+      },
+      icon: Icon(Icons.arrow_back),
+    );
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    // Need to find a way to close the search bar...
+    // close(context, null);
+    return new Oryx();
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+
+    final myList = query.isEmpty? loadAnimalList()
+        : loadAnimalList().where((p) => p.commonName.toLowerCase().contains(query.toLowerCase())).toList();
+    return myList.isEmpty? Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Center(
+        child: Text(
+            'No Results Found...',
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.grey
+          ),
+        ),
+      ),
+    ): ListView.builder(
+        itemCount: myList.length,
+        itemBuilder: (context, index){
+          final AnimalList listItem = myList[index];
+          return ListTile(
+            onTap: () {
+              showResults(context);
+            },
+            title: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  listItem.commonName,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(listItem.family),
+                Text(
+                  listItem.scientificName,
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                // Text(listItem.speciesName),
+                Divider(),
+              ],
+            ),
+          );
+        });
   }
 }
