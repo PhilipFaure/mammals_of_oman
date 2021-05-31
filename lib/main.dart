@@ -73,6 +73,7 @@ class _MyAppState extends State<MyApp>{
           "/a": (BuildContext context) => new IndexAlphbtc("Alphabetic Index"),
           "/b": (BuildContext context) => new PicsLeopard("Arabian Leopard"),
           "/c": (BuildContext context) => new Oryx(),
+          // '/lstObs': (BuildContext context) => new SpcsLstFrm(),
         }
     );
   }

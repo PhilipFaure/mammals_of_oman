@@ -106,10 +106,22 @@ class MyDrawer extends State<MainDrawer>{
               ),
               // onTap: () => Navigator.of(context).pushNamed('/a'),
             ),
-
+            ListTile(
+              leading: Icon(
+                  FontAwesomeIcons.clipboardList
+              ),
+              title: Text(
+                getTranslated(context, 'mySpcsLst'),
+                style: TextStyle(
+                    fontSize: 18
+                ),
+              ),
+              onTap: () => Navigator.of(context).pushNamed('/lstObs'),
+            ),
             ExpansionTile(
               leading: Icon(
-                  FontAwesomeIcons.language
+                Icons.g_translate
+                  // FontAwesomeIcons.language
               ),
               title: Text(
                 getTranslated(context, 'Lang'),

@@ -34,6 +34,15 @@ class _OryxState extends State<Oryx> {
           getTranslated(context, 'ArbnOryx'),
         ),
         backgroundColor: Colors.blueGrey[900],
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {
+
+            },
+            icon: Icon(FontAwesomeIcons.clipboardCheck),
+            // icon: Icon(Icons.add_box),
+          )
+        ],
       ),
       body: tabs[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
