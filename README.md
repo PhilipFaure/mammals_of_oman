@@ -1,3 +1,3 @@
 # mammals_of_oman
 
-A guide to the mammals of Oman
+A mobile app built for the fieldguide to the mammals of Oman. But was never launched..
